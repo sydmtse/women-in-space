@@ -157,15 +157,27 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
 
 
 
-/* TIMELINE */
+/* =============================================================================
+   TIMELINE
+   Horizontally scrollable component with two chronologically aligned rails
+   (contributions on top, media on bottom). Events alternate above/below each
+   rail — that alternation is the primary source of visual breathing room,
+   since adjacent cards never stack on the same side of the same rail.
+   ============================================================================= */
+
+/* ---------- Outer shell ---------- */
 .timeline {
   width: 100%;
-  max-width: none;   /* removes the limit */
+  max-width: none;
+  /* Small vertical trim — the parent .panel already supplies 96/48 padding,
+     so we don't need the full reference 80–100px here. */
+  padding: 24px 0 40px;
 }
 
 .timeline__header {
   text-align: center;
-  margin-bottom: 18px;
+  padding: 0 24px;
+  margin-bottom: 48px;   /* breathing room between header and scrollable track */
 }
 
 .timeline__title {
@@ -175,184 +187,236 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
 }
 
 .timeline__desc {
-  margin: 8px 0 0;
+  margin: 30px auto 0;
+  max-width: 820px;
+  line-height: 1.6;
   opacity: 0.9;
-  margin-top: 30px;
 }
 
 .timeline__controls {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 36px;
 }
 
-/* The horizontal scroller */
-.timeline__rail {
-  position: relative;
+/* ---------- Viewport = fixed left gutter + horizontally scrollable track ----------
+   The gutter sits OUTSIDE the scroll container so the two rail labels stay
+   pinned on screen regardless of horizontal scroll position. */
+.timeline__viewport {
   display: flex;
-  grid-auto-flow: column;
-  grid-auto-columns: min(80vw, 620px);
-  gap: 80px;
-  scroll-snap-type: x mandatory;
+  align-items: stretch;
 
-  height: 70vh;          
-  align-items: center;
+  /* Shared rail geometry. Cascades into .timeline__gutter and
+     .timeline__track so labels stay Y-aligned with the lines no matter
+     how you resize --rail-height.
 
-  overflow-x: auto;
-  padding: 40px 6vw;
-
-  
+     The rail Y values leave ~258px of clearance on each outer side
+     (30% of 860 = 258). That's enough for the tallest content block in
+     the dataset — "Women as 'human computers'" with its 4-line first
+     bullet clocks in around 170–180px, plus --connector-len (44) and
+     half --circle-size (32) = 246–256. 258 gives a small safety margin
+     so nothing clips against the overflow-y:hidden scroll container. */
+  --rail-height: 860px;     /* fixed tall component height */
+  --contrib-y: 30%;         /* upper rail Y (=258px from top)    */
+  --media-y: 70%;           /* lower rail Y (=258px from bottom) */
+  --circle-size: 64px;      /* anchor circles (reference: 60–70px) */
+  --connector-len: 44px;    /* vertical gap between circle edge and card edge */
+  --card-width: 180px;      /* compact content block (reference: 150–180px) */
 }
 
-.timeline__rail--contrib::before {
-  background: #c6ced4;
+.timeline__gutter {
+  position: relative;
+  flex: 0 0 160px;
+  height: var(--rail-height);
+  padding-right: 16px;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  margin-right: 8px;
 }
 
-.timeline__rail--media::before {
-  background: #ff4b6e;
-}
-
-.timeline__label {
+.timeline__rail-label {
   position: absolute;
-  top: 10px;
-  left: 6vw;
-
-  font-size: 0.8rem;
-  letter-spacing: 1px;
+  right: 16px;
+  transform: translateY(-50%);   /* centres the label vertically on its rail */
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  opacity: 0.7;
+  text-align: right;
+  line-height: 1.3;
+  max-width: 150px;
+  opacity: 0.75;
+}
+.timeline__rail-label--contrib { top: var(--contrib-y); color: #c6ced4; }
+.timeline__rail-label--media   { top: var(--media-y);   color: #ff4b6e; }
+
+/* On narrow screens the gutter eats too much of the scroll area, so drop it. */
+@media (max-width: 640px) {
+  .timeline__gutter { display: none; }
 }
 
-.tRow {
+/* ---------- Horizontal scroll container ---------- */
+.timeline__scroll {
   position: relative;
-  height: 190px; /* gives space for cards */
-  padding: 0 10px;
+  flex: 1 1 auto;
+  min-width: 0;                        /* let flex actually shrink the child */
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;   /* momentum scroll on iOS */
+  scroll-behavior: smooth;             /* only affects programmatic scrollTo */
+  /* NO CSS scroll-snap — user wants soft free scrolling via mouse/touch.
+     Pill clicks use scrollTo({behavior:"smooth"}) for "snap on demand". */
 }
 
-.tRow--contrib .tCard {
-  position: absolute;
-  top: 28px;
+/* Subtle horizontal scrollbar */
+.timeline__scroll::-webkit-scrollbar { height: 10px; }
+.timeline__scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 5px;
+}
+.timeline__scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 5px;
+}
+.timeline__scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.38);
 }
 
-.tRow--media .tCard {
-  position: absolute;
-  top: 28px;         /* hangs below the dot */
-}
-
-.tEvent {
-  position: absolute;
-  transform: translateX(-50%);
-  width: 250px;
-  max-width: 300px;
-  padding: 10px;
-}
-
-
-.tGroup {
-  flex: 0 0 min(80vw, 620px);
-
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  gap: 80px;
-
+/* ---------- Inner track (explicit pixel width is set inline from JS) ---------- */
+.timeline__track {
   position: relative;
-  scroll-snap-align: center;
-
-  --top-rail: 25%;
-  --bottom-rail: 75%;
+  height: var(--rail-height);
 }
 
-.tGroup::before,
-.tGroup::after {
-  content: "";
+/* ---------- The two thin horizontal lines, each running the full track width ---------- */
+.timeline__rail-line {
   position: absolute;
   left: 0;
   right: 0;
-  height: 2px;
-  transform: translateY(-50%);
+  height: 1px;              /* minimal line weight per reference */
+  pointer-events: none;
+}
+.timeline__rail-line--contrib {
+  top: var(--contrib-y);
+  background: rgba(198, 206, 212, 0.4);    /* desaturated #c6ced4 */
+}
+.timeline__rail-line--media {
+  top: var(--media-y);
+  background: rgba(255, 75, 110, 0.5);     /* desaturated #ff4b6e */
 }
 
-/* top rail */
-.tGroup::before {
-  top: 25%;
-  background: #c6ced4;
-  top: var(--top-rail);
-}
-
-/* bottom rail */
-.tGroup::after {
-  top: 75%;
-  background: #ff4b6e;
-  top: var(--bottom-rail);
-}
-
-/* Each slide “item” */
-.tItem {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Node area where dot sits on the line */
+/* ---------- Event node ----------
+   Each .tNode is a zero-height anchor positioned at (event-X, rail-Y). Its
+   children are absolutely positioned relative to that anchor so the circle
+   always sits on the rail line, while the card floats above or below. */
 .tNode {
-  position: relative;
+  position: absolute;
+  width: var(--card-width);
+  height: 0;
+  transform: translateX(-50%);   /* centre the node on its X coordinate */
 }
+.tNode--contrib { top: var(--contrib-y); }
+.tNode--media   { top: var(--media-y); }
 
-/* timeline dot*/
-.tDot {
+/* Circular anchor — always centred on the rail line */
+.tCircle {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-  width: 14px;
-  height: 14px;
-  border-radius: 999px;
+  top: 0;
+  width: var(--circle-size);
+  height: var(--circle-size);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);   /* centre of circle === rail-Y */
+  z-index: 2;
 }
-
-.tDot--contrib {
-  top: 25%;
+.tNode--contrib .tCircle {
   background: #c6ced4;
-  top: var(--top-rail);
+  /* Inner halo matches the panel bg so the rail line appears "broken" by the
+     circle. Outer halo is a soft glow in the circle's own colour. */
+  box-shadow:
+    0 0 0 5px #3c435c,
+    0 0 0 7px rgba(198, 206, 212, 0.22);
 }
-
-.tDot--media {
-  top: 75%;
+.tNode--media .tCircle {
   background: #ff4b6e;
-  top: var(--bottom-rail);
+  box-shadow:
+    0 0 0 5px #3c435c,
+    0 0 0 7px rgba(255, 75, 110, 0.28);
 }
 
-
-/* Big decade label */
-.tEra {
-  font-size: 22px;
-  margin: 6px 0 10px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  opacity: 0.9;
+/* Thin vertical connector that links the circle to the card */
+.tConnector {
+  position: absolute;
+  left: 50%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.22);
+  transform: translateX(-50%);
 }
 
-/* The panel/card */
+/* Card — compact content block, centred on its node */
 .tCard {
-background: rgba(255, 255, 255, 0.08);
-backdrop-filter: blur(8px);
-border-radius: 10px;
- 
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 14px 14px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 6px;
+  text-align: center;
+  box-sizing: border-box;
 }
 
+/* ABOVE variant: card + connector extend UPWARD from the rail line.
+   Connector: from top of circle (y = -circle/2) up by --connector-len.
+   Card:      bottom edge = -circle/2 - --connector-len (above the connector). */
+.tNode--above .tConnector {
+  bottom: calc(var(--circle-size) / 2);
+  height: var(--connector-len);
+}
+.tNode--above .tCard {
+  bottom: calc(var(--circle-size) / 2 + var(--connector-len));
+}
+
+/* BELOW variant: card + connector extend DOWNWARD from the rail line. */
+.tNode--below .tConnector {
+  top: calc(var(--circle-size) / 2);
+  height: var(--connector-len);
+}
+.tNode--below .tCard {
+  top: calc(var(--circle-size) / 2 + var(--connector-len));
+}
+
+/* Subtle accent on the card edge facing the rail — ties card to rail without
+   adding heavy borders elsewhere. */
+.tNode--contrib.tNode--above .tCard { border-bottom: 1px solid rgba(198, 206, 212, 0.4); }
+.tNode--contrib.tNode--below .tCard { border-top:    1px solid rgba(198, 206, 212, 0.4); }
+.tNode--media.tNode--above .tCard   { border-bottom: 1px solid rgba(255, 75, 110, 0.45); }
+.tNode--media.tNode--below .tCard   { border-top:    1px solid rgba(255, 75, 110, 0.45); }
+
+/* Card typography */
+.tYear {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  opacity: 0.65;
+  margin-bottom: 6px;
+}
 .tTitle {
-  margin: 0 0 10px;
-  font-size: 18px;
+  margin: 0 0 8px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.3;
 }
-
-.tList {
+.tText {
   margin: 0;
-  padding-left: 18px;
-  line-height: 1.6;
-  opacity: 0.95;
+  padding: 0;
+  list-style: none;
+  font-size: 0.76rem;
+  line-height: 1.5;
+  opacity: 0.88;
 }
-
-/* Optional: hide scrollbar (still scrolls!) */
-.timeline__rail::-we
+.tText li + li { margin-top: 4px; }
+/* End of timeline styles */
 
 /* SPOTLIGHT SECTION */
 /* sub-section buttons */
