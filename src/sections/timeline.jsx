@@ -1,7 +1,30 @@
 import { useMemo, useRef, useState } from "react";
 
+import computersImg from "../sections/profiles/computers.jpg";
+import EndImg from "../sections/profiles/1944.jpg";
+import ProjectImg from "../sections/profiles/1959.jpg";
+import MercuryImg from "../sections/profiles/1961.jpg";
+import ValenImg from "../sections/profiles/1963.jpg";
+import StarImg from "../sections/profiles/1966.jpg";
+import EqualImg from "../sections/profiles/1972.jpg";
+import RuthImg from "../sections/profiles/1973.jpg";
+import MotionImg from "../sections/profiles/1975.jpg";
+import WAstroImg from "../sections/profiles/1978.jpg";
+import SallyImg from "../sections/profiles/1983.jpg";
+import MaeImg from "../sections/profiles/1992.jpg";
+import EllenImg from "../sections/profiles/1993.jpg";
+import KalpanaImg from "../sections/profiles/1997.jpg";
+import EileenImg from "../sections/profiles/1999.jpg";
+import ISSImg from "../sections/profiles/2001.jpg";
+import HiddenImg from "../sections/profiles/2016.jpg";
+import HollyImg from "../sections/profiles/2018.jpg";
+import AllImg from "../sections/profiles/2019.jpg";
+import NichelleImg from "../sections/profiles/2022.jpg";
+import CrewImg from "../sections/profiles/2023-24.jpg";
+import ArtemisImg from "../sections/profiles/2026.jpg";
+
 // =============================================================================
-// TIMELINE DATA (unchanged from the original)
+// TIMELINE DATA
 // =============================================================================
 const slides = [
   {
@@ -13,14 +36,16 @@ const slides = [
         text: [
           "Women mathematicians perform critical calculations for aeronautics and early spaceflight",
           "Labour framed as clerical, not scientific"
-        ]
+        ],
+        img: computersImg
       },
       {
         year: "1944",
         title: "End of Women pilot programs",
         text: [
           "Women excluded from military aviation after WASP program ended"
-        ]
+        ],
+        img: EndImg
       },
       {
         year: "1958",
@@ -37,7 +62,8 @@ const slides = [
         text: [
           "Military pilots selected",
           "Mercury Seven: all white male astronauts"
-        ]
+        ],
+        img: ProjectImg
       }
     ],
     media: [
@@ -71,12 +97,14 @@ const slides = [
         text: [
           "13 women pass astronaut testing",
           "NASA refuses program access"
-        ]
+        ],
+        img: MercuryImg
       },
       {
         year: "1963",
         title: "Valentina Tereshkova",
-        text: ["First woman in space"]
+        text: ["First woman in space"],
+        img: ValenImg
       },
       {
         year: "1961-1969",
@@ -115,29 +143,24 @@ const slides = [
         text: [
           "Diverse crew representation",
           "Uhura as symbolic breakthrough"
-        ]
-      }
+       ],
+        img: StarImg
+      },
     ]
   },
 
   {
     era: "1970s-1980s",
     contributions: [
-      {
-        year: "1972-1973",
-        title: "Ruth Bates Harris",
-        text: [
-          "Highest-ranking Black woman at NASA",
-          "Terminated after discrimination report"
-        ]
-      },
+ 
       {
         year: "1972",
         title: "Equal Employment Act",
         text: [
           "Opens pathway for women",
           "Delayed implementation in practice"
-        ]
+        ],
+        img: EqualImg
       },
       {
         year: "1978",
@@ -145,14 +168,20 @@ const slides = [
         text: [
           "NASA selects first female cohort",
           "Includes scientists + engineers"
-        ]
+        ],
+        img: WAstroImg
       },
       {
         year: "1983",
         title: "Sally Ride",
-        text: [
-          "First American woman in space"
-        ]
+        text: ["First American woman in space"],
+        img: SallyImg
+      },
+
+      {
+        year: "1986",
+        title: "Challenger Disaster",
+        text: ["Explosion of Space Shuttle Challenger shortly after launch - claimed lives of six crew, including Christa McAuliffe - first teacher in space."]
       }
     ],
     media: [
@@ -164,21 +193,26 @@ const slides = [
           "Federal Women’s Program marginalised"
         ]
       },
-      {
-        year: "1972",
-        title: "Historical Data Book",
+
+     {
+        year: "1972-1973",
+        title: "Ruth Bates Harris",
         text: [
-          "NASA admits lack of gender tracking"
-        ]
+          "Highest-ranking Black woman at NASA",
+          "Terminated after discrimination report"
+        ],
+        img: RuthImg
       },
+
       {
         year: "1975-1978",
         title: "Women in Motion Inc.",
         text: [
           "Nichelle Nichols recruits astronauts",
           "Boosts female applicants by 15%"
-        ]
-      }
+         ],
+        img: MotionImg
+      },
     ]
   },
 
@@ -188,37 +222,58 @@ const slides = [
       {
         year: "1992",
         title: "Mae Jemison",
-        text: ["First Black woman in space"]
+        text: ["First Black woman in space"],
+        img: MaeImg
       },
       {
         year: "1993",
         title: "Ellen Ochoa",
-        text: ["First Hispanic woman in space"]
-      },
-      {
-        year: "1996",
-        title: "Shannon Lucid",
-        text: ["188-day mission record"]
+        text: ["First Hispanic woman in space"],
+        img: EllenImg
       },
       {
         year: "1997",
         title: "Kalpana Chawla",
-        text: ["First Asian American woman in space"]
+        text: ["First Asian American woman in space"],
+        img: KalpanaImg
       },
       {
         year: "1999",
         title: "Eileen Collins",
-        text: ["First woman shuttle commander"]
+        text: ["First woman shuttle commander"],
+        img: EileenImg
+      },
+      {
+        year: "2001",
+        title: "Women led ISS missions",
+        text: ["Operational authority increases, historical recognition remains uneven"],
+        img: ISSImg
+      },
+
+      {
+        year: "2003",
+        title: "Columbia Disaster",
+        text: ["Space Shuttle Columbia disintegrated upon re-entry into the Earth's atmosphere, killing all seven crew members, including astronaut Kalpana Chawla, "]
       },
       {
         year: "2009",
         title: "All-woman spacewalk cancelled",
-        text: [
-          "Equipment designed for male bodies"
-        ]
+        text: ["Equipment designed for male bodies"]
       }
     ],
-    media: []
+    media: [
+        {
+        year: "1990",
+        title: "NASA begins to digitize",
+        text: ["NASA begins to transfer large amounts of data to combat decaying physical archives such as magnetic tape. Builds the Planetary Data System which houses 50years of planetary missions and continues to be updated today."]
+      },
+
+        {
+        year: "2007",
+        title: "NASA publicizes records",
+        text: ["NASA partners with the Internet Archive to scan and make vast collections of photographs, films, and videos publicly available."]
+      }
+    ]
   },
 
   {
@@ -229,36 +284,31 @@ const slides = [
         title: "50% women astronaut class",
         text: ["Highest proportion in NASA history"]
       },
-      {
-        year: "2016",
-        title: "Kate Rubins",
-        text: ["First DNA sequencing in space"]
-      },
+    
       {
         year: "2018",
         title: "Holly Ridings",
-        text: ["First female flight director"]
+        text: ["First female flight director"],
+        img: HollyImg
       },
       {
         year: "2019",
         title: "All-woman spacewalk",
-        text: ["Koch and Meir"]
+        text: ["Christina Koch and Jessica Meir conduct the first all-women space walk."],
+        img: AllImg
       }
     ],
     media: [
       {
         year: "2016",
         title: "Hidden Figures",
-        text: [
-          "Brings hidden labour into public narrative"
-        ]
+        text: ["Brings hidden labour into public narrative"],
+        img: HiddenImg
       },
       {
         year: "2019",
         title: "Artemis Program",
-        text: [
-          "First woman on the Moon becomes policy goal"
-        ]
+        text: ["Public committment to land the first woman on the Moon."]
       }
     ]
   },
@@ -266,15 +316,24 @@ const slides = [
   {
     era: "2020s",
     contributions: [
-      {
-        year: "2020",
-        title: "Christina Koch",
-        text: ["328-day record mission"]
+
+        {
+        year: "2021",
+        title: "Rise of Commercial spaceflight",
+        text: ["Private companies like SpaceX and Blue Origin have successfully launched paying customers and private citizens into space, representing a new future of space tourism." ],
       },
+
       {
-        year: "2023-2024",
+        year: "2022",
+        title: "Artemis I mission",
+        text: ["First uncrewed test of NASA's Artemis program, with the goal of returning humans to the moon."]
+      },
+
+      {
+        year: "2026",
         title: "Artemis II",
-        text: ["First woman lunar mission planned"]
+        text: ["Successful 10-day trip by of Artemis II"],
+        img: ArtemisImg
       }
     ],
     media: [
@@ -284,23 +343,30 @@ const slides = [
         text: ["NASA renames HQ after Hidden Figures impact"]
       },
       {
-        year: "2022–2023",
+        year: "2022",
         title: "Nichelle Nichols tribute",
-        text: ["Ashes launched into space"]
+        text: ["Ashes launched into space" ],
+        img: NichelleImg
       },
-      {
-        year: "2021",
-        title: "Gender Inclusivity Study",
-        text: [
-          "NASA admits male-biased design history"
-        ]
+
+       {
+        year: "2022-2023",
+        title: "Artemis II Crew announcement",
+        text: ["Christine Koch selected as the first woman to travel to the Moon (planned mission)" ],
+        img: CrewImg
       },
+
+       {
+        year: "2024",
+        title: "Hidden Figures Recognized",
+        text: ["Medals were awarded to Katherine Johnson, Dorothy Vaughn, and Dr.Christine Darden, along with a collective medal for all women who served as computers, mathematicians, and engineers at NASA between 1930-1970." ],
+      },
+
+
       {
         year: "2024-2025",
         title: "DEI rollback",
-        text: [
-          "Removal of women-focused archival language"
-        ]
+        text: ["Removal of women-focused archival language"]
       }
     ]
   }
@@ -454,7 +520,13 @@ export default function Timeline() {
                   style={{ left: `${PAD_X + gi * NODE_GAP}px` }}
                 >
                   {/* Circular anchor — sits centred on the rail line */}
-                  <span className="tCircle" aria-hidden="true" />
+                  {event.img ? (
+  <span className="tCircle tCircle--image">
+    <img src={event.img} alt={event.title} />
+  </span>
+) : (
+  <span className="tCircle" aria-hidden="true" />
+)}
                   {/* Thin vertical connector between circle and card */}
                   <span className="tConnector" aria-hidden="true" />
                   {/* Compact content block */}

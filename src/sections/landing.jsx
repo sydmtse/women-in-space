@@ -2,14 +2,6 @@ export default function Landing() {
   return (
     <div className="landing">
       
-      {/* Background */}
-      <div className="nebula"></div>
-      <div className="stars stars--far"></div>
-      <div className="stars stars--mid"></div>
-      <div className="stars stars--near"></div>
-
-      <div className="vignette"></div>
-
       {/* Content */}
       <div className="landing__content">
         <p className="landing__kicker">MAKING</p>

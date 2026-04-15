@@ -73,88 +73,6 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
 .section__title { margin: 0 0 18px; letter-spacing: 1px; text-transform: uppercase; }
 .section__text { margin: 10px auto; max-width: 760px; line-height: 1.6; opacity: 0.95; }
 
-.landing {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  background: radial-gradient(ellipse at bottom, #02040a 0%, #000 100%);
-  color: white;
-}
-
-.nebula {
-  position: absolute;
-  inset: 0;
-  background: 
-    radial-gradient(circle at 20% 30%, rgba(80,120,255,0.12), transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(255,120,80,0.08), transparent 50%),
-    radial-gradient(circle at 60% 20%, rgba(120,80,255,0.06), transparent 45%);
-  filter: blur(60px);
-  opacity: 0.6;
-  animation: nebulaDrift 120s ease-in-out infinite alternate;
-  z-index: 0;
-}
-
-@keyframes nebulaDrift {
-  from { transform: translate(0, 0) scale(1); }
-  to { transform: translate(-50px, 30px) scale(1.1); }
-}
-
-.stars {
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  top: -50%;
-  left: -50%;
-  background-repeat: repeat;
-  z-index: 1;
-}
-
-.stars--far {
-  background-image: radial-gradient(white 0.8px, transparent 1px);
-  background-size: 4px 4px;
-  opacity: 0.25;
-  animation: driftDiagonal 220s linear infinite;
-}
-
-.stars--mid {
-  background-image: radial-gradient(white 1.2px, transparent 1.2px);
-  background-size: 7px 7px;
-  opacity: 0.4;
-  animation: driftDiagonal 160s linear infinite;
-}
-
-.stars--near {
-  background-image: radial-gradient(white 1.8px, transparent 1.8px);
-  background-size: 10px 10px;
-  opacity: 0.6;
-  animation: driftDiagonal 120s linear infinite, twinkle 6s ease-in-out infinite alternate;
-}
-
-@keyframes driftDiagonal {
-  from {
-    transform: translate(0, 0);
-  }
-  to {
-    transform: translate(-200px, 300px);
-  }
-}
-
-@keyframes twinkle {
-  from { opacity: 0.4; }
-  to { opacity: 0.8; }
-}
-
-.vignette {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    ellipse at center,
-    transparent 40%,
-    rgba(0, 0, 0, 0.7) 100%
-  );
-  z-index: 2;
-}
-
 
 
 /* =============================================================================
@@ -221,7 +139,7 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
   --media-y: 70%;           /* lower rail Y (=258px from bottom) */
   --circle-size: 64px;      /* anchor circles (reference: 60–70px) */
   --connector-len: 44px;    /* vertical gap between circle edge and card edge */
-  --card-width: 180px;      /* compact content block (reference: 150–180px) */
+  --card-width: 220px;      /* compact content block (reference: 150–180px) */
 }
 
 .timeline__gutter {
@@ -333,13 +251,37 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
      circle. Outer halo is a soft glow in the circle's own colour. */
   box-shadow:
     0 0 0 5px #3c435c,
-    0 0 0 7px rgba(198, 206, 212, 0.22);
+    0 0 0 6px #8686918e;
 }
 .tNode--media .tCircle {
   background: #ff4b6e;
   box-shadow:
     0 0 0 5px #3c435c,
-    0 0 0 7px rgba(255, 75, 110, 0.28);
+    0 0 0 6px rgba(255, 75, 111, 0.473);
+}
+
+/* Image-based circles */
+.tCircle--image {
+  overflow: hidden;
+  padding: 0; /* remove any inner spacing */
+}
+
+.tCircle--image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Optional: slightly stronger emphasis for image nodes */
+.tCircle--image {
+  box-shadow:
+    0 0 0 5px #3c435c,
+    0 0 0 7px rgba(255, 255, 255, 0.25);
+}
+
+.tCircle--image {
+  transform: translate(-50%, -50%) scale(1.6);
 }
 
 /* Thin vertical connector that links the circle to the card */
