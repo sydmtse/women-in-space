@@ -5,6 +5,7 @@ import Mission from "./sections/mission";
 import Timeline from "./sections/timeline";
 import Spotlight from "./sections/spotlight";
 import Discussion from "./sections/discussion";
+import Footer from "./sections/footer";
 
 export default function App() {
   return (
@@ -31,6 +32,11 @@ export default function App() {
         <section id="discussion" className="panel panel--light">
           <Discussion />
         </section>
+
+        <section id="footer" className="panel panel--dark">
+          <Footer />
+        </section>
+
       </main>
     </div>
   );

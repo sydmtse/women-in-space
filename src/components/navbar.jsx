@@ -4,6 +4,7 @@ const links = [
   { label: "timeline", id: "timeline" },
   { label: "spotlight", id: "spotlight" },
   { label: "join the discussion", id: "discussion" },
+  { label: "contact us", id: "footer" }
 ];
 
 function scrollToId(id) {
