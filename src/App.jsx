@@ -33,7 +33,7 @@ export default function App() {
           <Discussion />
         </section>
 
-        <section id="footer" className="panel panel--dark">
+        <section id="footer" className="panel panel--footer">
           <Footer />
         </section>
 

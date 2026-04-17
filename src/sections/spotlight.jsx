@@ -19,7 +19,7 @@ const explorers = [
   {
     name: "Mae Jemison",
     field: "Astronaut / Physician / Engineer",
-    period: "1987 - 1993",
+    period: "Active at NASA: 1987 - 1993",
     did: "Dr. Mae Jemison was the first African-American woman to travel to space when she served as a mission specialist aboard the Space Shuttle Endeavour (STS-47) from September 12-20, 1992, orbiting the Earth 127 times. During her eight-day mission, she conducted experiments on bone cell research, motion sickness, and frog development in microgravity in the Spacelab-J module. Since leaving NASA in 1993, she founded multiple organizations including the Jemison Group - a consulting firm focused on technology and its sociocultural impact, and an international science camp “The Earth We Share”.",
     representation:
       "The publicity from her historic flight gave her a more visible platform. She appeared in a number of publications and media outlets as a symbol of progress. Her incredible outreach and visibility lent to her later success as a scientist and public speaker, encouraging STEM involvement for women and minorities." ,
@@ -27,29 +27,29 @@ const explorers = [
   },
   {
     name: "Eileen Collins",
-    field: "Astronaut / Pilot",
-    period: "1990 - 2006",
-    did: "Selected as an astronaut in 1990, Collins became the first woman pilot of a U.S. space shuttle in February 1995, serving on the orbiter Discovery for a rendezvous and docking mission to the Russian space station Mir. She became the first woman to command a US spacecraft with STS-93, which launched in July 1999 and deployed the Chandra X-Ray Observatory. In 2005 she commanded STS-114, NASA's *return to flight* mission after the Space Shuttle Columbia disaster.",
+    field: "Astronaut / Military Pilot",
+    period: "Active at NASA: 1990-2006",
+    did: "Eileen Collins was a NASA astronaut and U.S. Air Force test pilot who played a key role in expanding women's participation in spaceflight leadership. In 1995, she became the first woman to pilot a Space Shuttle (STS-63), a mission that included a rendezvous with the Russian Mir space station and marked an important step in post-Cold War cooperation. In 1999, she became the first woman to command a Space Shuttle mission (STS-93). She later commanded STS-114 in 2005, NASA’s “Return to Flight” mission following the Space Shuttle Columbia disaster, which was central to re-establishing operational confidence in the agency's human spaceflight programme",
     representation:
-      "Recognised in leadership, but still framed as exception.",
+      "Media coverage of Eileen Collins frequently emphasized her status as the “first woman” to serve as both a Space Shuttle pilot (1995) and commander (1999). Reporting from outlets such as The New York Times and CNN foregrounded this milestone, often introducing her role through the lens of gender before addressing mission-specific or technical responsibilities. Within institutional materials, including NASA press kits and mission briefings, references to these gendered milestones were similarly positioned early in communications, followed by more detailed operational information. Coverage also extended beyond her role within the shuttle programme, with attention given to her personal life, particularly in relation to her role as a mother and the broader context of work–life balance.",
     img: eileen_collins,
   },
   {
     name: "Sally Ride",
     field: "Astronaut / Physicist",
-    period: "1980s",
-    did: "First American woman in space (1983).",
+    period: "Active at NASA: 1978-1987",
+    did: "Sally Ride was a physicist and NASA astronaut who became the first American woman in space in 1983 aboard STS-7. During the mission, she operated the shuttle’s robotic arm (Canadarm), deploying and retrieving satellites. She later flew a second mission (STS-41-G), aboard Challenger in 1984; the crew included another woman, Kathryn Sullivan, who became the first American woman to walk in space. Ride played a significant role on the investigative panels for the Challenger disaster and the Columbia disaster becoming the only individual to participate in both inquiries. Her work contributed to the improving safety procedures and accountability within NASA. Her career has since extended beyond flight, including founding the non-profit Sally Ride Science at UC San Diego in 2001 to inspire young students in STEM fields, and authoring children’s books about space.",
     representation:
-      "Highly visible but often reduced to 'first woman'.",
+      "Media coverage of Sally Ride during her 1983 mission provides a well-documented example of gendered framing in science reporting. In pre-launch press conferences archived by NASA, journalists asked questions concerning her emotional responses, physical suitability for spaceflight, and the potential impact of the mission on her reproductive health—lines of questioning not typically directed at male astronauts. Coverage from publications such as The New York Times, Time, and Newsweek consistently positioned. Ride as a cultural milestone, frequently foregrounding her status as 'America’s first woman in space' alongside discussion of her scientific role. Ride did not publicly disclose details of her personal relationships during her lifetime, and media coverage remained focused on her professional role and historic status within the space programme. After her death, she was acknowledged to have had a long-term same-sex partner, a detail that has since been incorporated into retrospective accounts of her life.",
     img: sally_ride,
   },
   {
     name: "Christina Koch",
     field: "Astronaut / Engineer",
-    period: "2010s–2020s",
-    did: "Record for longest single spaceflight by a woman.",
+    period: "Active at NASA: 2013-present",
+    did: "Christina Koch is an American astronaut and engineer who holds the record for the longest single spaceflight by a woman. She has contributed to International Space Station (ISS) expeditions and completed NASA’s most recent Artemis II mission, which sent astronauts around the Moon. This positions her to be the first woman to travel beyond low Earth orbit. Koch launched to the ISS in March 2019 as part of Expedition 59/60/61, remaining in space for 328 days—setting a record for the longest single spaceflight by a woman. During her mission, she conducted scientific experiments in biology, Earth science, and physics, and completed six spacewalks. Notably, she participated in the first all-female spacewalk alongside Jessica Meir in October 2019, replacing a failed power controller on the station.",
     representation:
-      "More visibility, but still within selective narratives.",
+      "Koch's role in Artemis II has been widely publicized as part of NASA’s broader narrative of returning humans to the Moon, with a strong emphasis on inclusion and representation. She is often positioned as a symbol of the future of space exploration - used in outreach, interviews, and promotional media to represent progress in gender equity.",
     img: christina_koch,
   },
 ];
@@ -57,38 +57,38 @@ const explorers = [
 const behindScenes = [
   {
     name: "Katherine Johnson",
-    field: "Mathematician",
-    period: "1960s–1980s",
-    did: "Calculated orbital mechanics for Apollo missions.",
+    field: "Human Computer / Mathematician",
+    period: "Active at NASA/NACA: 1953-1986",
+    did: "Johnson's work included calculating trajectories, launch windows, and emergency return paths for Project Mercury spaceflights, including those for astronauts Alan Shepard and John Glenn, and rendezvous paths for the Apollo Lunar Module and command module on flights to the Moon. She personally performed the final recalculations of programme computer calculations.",
     representation:
-      "Long uncredited; later recognised through Hidden Figures.",
+      "There was no documented record of her pivotal role in NASA, along with many other software engineers and mathematicians, she could not claim any authorial credit and therefore there was no official record of her contributions. It was only in the past decade, through the popularization of Margot Lee Shetterly’s book and film adaptation that brought her to the forefront of media. This later followed by  recognition from the Obama administration awarding the Presidential Medal of Freedom in 2015, and the building she once worked in renamed: the Katherine G. Johnson Computational Research Facility in her honour in 2016. ",
     img: katherine_johnson,
   },
   {
     name: "Margaret Hamilton",
     field: "Computer Scientist",
-    period: "1960s",
-    did: "Led Apollo flight software development.",
+    period: "1961-1970s",
+    did: "Hamilton was the first programmer hired for the Apollo project at MIT and the first female programmer in the project, and later became Director of the Software Engineering Division. She was responsible for the team writing and testing all onboard in-flight software for the Apollo spacecraft's Command and Lunar Module. …",
     representation:
-      "Critical but historically under-recognised.",
+      "Hamilton is hardly mentioned in the literature before 2016 - but in recent years she has received widespread recognition. She received the Presidential Medal of Freedom …",
     img: margaret_hamilton,
   },
   {
     name: "Ruth Bates Harris",
-    field: "Civil Rights Advocate / NASA Employee",
-    period: "1970s",
-    did: "Exposed discrimination within NASA hiring practices.",
+    field: "Civil Rights Advocate / NASA Public Affairs Employee",
+    period: "Active at NASA: 1971-1976",
+    did: "Harris had earned an MBA with an emphasis in personnel administration and had years of experience as the director of Human Relations for the Montgomery County school board in Maryland before being recruited to NASA. She was tasked with reforming the agency's equality programs, but faced systemic resistance - her firing led to Congressional attention and over 200 newspaper articles covering the case. She was rehired in 1973 as Deputy Assistant Administrator for Public Affairs.",
     representation:
-      "Marginalised and silenced within institutions.",
+      "Ruth Bates Harris remains one of the least publicly known but most structurally significant women in NASA's history. Her case has since been published in sociological, historical, and public management journals as a study in intersectionality and institutional resistance. …",
     img: ruth_bates,
   },
   {
     name: "Nancy Grace Roman",
-    field: "Astronomer",
-    period: "1960s–1980s",
-    did: "First Chief of Astronomy at NASA; helped develop Hubble.",
+    field: "Astronomy / Space Science Administration",
+    period: "Active at NASA: 1959–1979",
+    did: "The first female executive at NASA, Roman served as NASA's first Chief of Astronomy throughout the 1960s and 1970s, establishing her as one of the 'visionary founders of the US civilian space program'. Roman created NASA's space astronomy program and is known as the 'Mother of Hubble.' She had oversight for the planning and development of programs including the Cosmic Background Explorer and the Hubble Space Telescope. In the mid-1960s, she set up a committee of astronomers and engineers to envision a telescope that could accomplish important scientific goals, and convinced NASA and Congress that it was a priority.",
     representation:
-      "Called 'Mother of Hubble' but underrepresented.",
+      "Dr. Roman faced many challenges throughout her career; she was discouraged from pursuing astronomy from a young age. She had to use the prefix ‘Dr.’ with her name because 'otherwise, I could not get past the secretaries.' In 2020, NASA administrator Jim Bridenstine announced that the Wide Field Infrared Survey Telescope would be named the Nancy Grace Roman Space Telescope in recognition of her enduring contributions to astronomy.",
     img: nancy_grace,
   },
 ];
@@ -97,7 +97,7 @@ const advocates = [
   {
     name: "Nichelle Nichols",
     field: "Actress / NASA Recruiter",
-    period: "1970s–1980s",
+    period: "Active at NASA: 1977-2015",
     did: "Helped recruit women and people of colour into NASA.",
     representation:
       "Known for Star Trek, under-credited for NASA impact.",
@@ -106,10 +106,10 @@ const advocates = [
   {
     name: "Margot Lee Shetterly",
     field: "Author / Researcher",
-    period: "2010s",
-    did: "Wrote Hidden Figures.",
+    period: "Book published 2016",
+    did: "Margot Lee Shetterly is an American nonfiction writer whose first book, Hidden Figures: The American Dream and the Untold Story of the Black Women Who Helped Win the Space Race (2016), is about African-American women mathematicians working at NASA who were instrumental to the success of the United States space program. Shetterly's father was an atmospheric research scientist at NASA Langley, and growing up she was surrounded by Black scientists and engineers - many of them women - which provided her rare insights into the early days of American aeronautics. Through hundreds of interviews and thousands of documents, Shetterly told the stories of Dorothy Vaughan, Katherine Johnson, Mary Jackson, and Christine Darden - women who overcame discrimination to become vital parts of mathematics and engineering history.",
     representation:
-      "Reshaped visibility of Black women in NASA history.",
+      "The film adaptation of her book became the number one movie in America and was nominated for the Academy Award for Best Picture and Best Adapted Screenplay. Her work had direct real-world impact: it led to NASA renaming its headquarters building after Mary W. Jackson, and contributed to Katherine Johnson receiving the Congressional Gold Medal. Shetterly is also the founder of the [Human Computer Project](http://margotleeshetterly.com/the-human-computer-project), a permanent digital archive of the women who worked as NASA's human computers.",
     img: margot_lee,
   },
 ];
@@ -138,6 +138,7 @@ export default function Spotlight() {
       <p className="intro-text">
         Discover some key female figures that made immense contributions to science, space exploration, and helped make space more accessible and visible to all.
       </p>
+      <p className="timeline__hint">Click on the buttons and profiles below to learn more</p>
 
       {/* Tabs */}
       <div className="pillRow">

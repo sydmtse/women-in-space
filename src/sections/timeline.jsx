@@ -34,8 +34,7 @@ const slides = [
         year: "1943-1958",
         title: "Women as 'human computers'",
         text: [
-          "Women mathematicians perform critical calculations for aeronautics and early spaceflight",
-          "Labour framed as clerical, not scientific"
+          "Women mathematicians perform critical calculations for aeronautics and early spaceflight. Labour framed as clerical, not scientific"
         ],
         img: computersImg
       },
@@ -52,7 +51,7 @@ const slides = [
         title: "Creation of NASA",
         text: [
           "NACA renamed NASA",
-          "Women already embedded but structurally marginalised",
+          "Women already embedded but structurally marginalized",
           "Documentation privileges engineers and astronauts"
         ]
       },
@@ -60,8 +59,7 @@ const slides = [
         year: "1959",
         title: "Project Mercury astronaut testing",
         text: [
-          "Military pilots selected",
-          "Mercury Seven: all white male astronauts"
+          "Military pilots selected for Mercury 7: made up of an all white male astronaut crew."
         ],
         img: ProjectImg
       }
@@ -72,7 +70,7 @@ const slides = [
         title: "Disclosing activities",
         text: [
           "Space Act mandates public dissemination",
-          "Early comms in Aviation Weekly ads"
+          "Early comms in Aviation Weekly magazine ads"
         ]
       }
     ]
@@ -103,21 +101,21 @@ const slides = [
       {
         year: "1963",
         title: "Valentina Tereshkova",
-        text: ["First woman in space"],
+        text: ["First woman in space (USSR)"],
         img: ValenImg
       },
       {
         year: "1961-1969",
         title: "Apollo Program",
         text: [
-          "Women programmers ensure mission success",
-          "Labour feminised and under-archived"
+          "Women mathematicians and programmers ensure mission success",
+          "No authorial credit was given to softward or computer labour"
         ]
       },
       {
         year: "1969",
         title: "Apollo 11",
-        text: ["First Moon landing"]
+        text: ["First Human on the Moon"]
       }
     ],
     media: [
@@ -125,7 +123,7 @@ const slides = [
         year: "1962",
         title: "Gender Discrimination hearings",
         text: [
-          "John Glenn claims women unfit",
+          "Mercury 7 astronauts testified women unfit to be astronauts",
           "NASA requirements exclude women structurally"
         ]
       },
@@ -133,8 +131,8 @@ const slides = [
         year: "1966",
         title: "Affirmative Action",
         text: [
-          "Focused primarily on racial inequality",
-          "Gender largely unaddressed"
+          "New mandates target racial and gender inequality in accordance to the Civil Rights Act",
+          "Equal Opportunity/Diversity initiatives, designed to improve the hiring, promotion, and representation of women "
         ]
       },
       {
@@ -142,7 +140,7 @@ const slides = [
         title: "Star Trek airs",
         text: [
           "Diverse crew representation",
-          "Uhura as symbolic breakthrough"
+          "Uhura (played by Nichelle Nichols) as symbolic breakthrough"
        ],
         img: StarImg
       },
@@ -167,7 +165,7 @@ const slides = [
         title: "First women astronauts",
         text: [
           "NASA selects first female cohort",
-          "Includes scientists + engineers"
+          "Includes scientists & engineers"
         ],
         img: WAstroImg
       },
@@ -190,7 +188,14 @@ const slides = [
         title: "NASA Reporting",
         text: [
           "Women minimally documented",
-          "Federal Women’s Program marginalised"
+          "Federal Women's Program (an Equal Opportunity/Diversity initiative) only mentioned as a caption under a photo."
+        ]
+      },
+      {
+        year: "1972",
+        title: "NASA Historical Data Book Report",
+        text: [
+          "NASA admits to having had no “accurate reporting system” for the positions of minorities and women until this year."
         ]
       },
 
@@ -198,8 +203,8 @@ const slides = [
         year: "1972-1973",
         title: "Ruth Bates Harris",
         text: [
-          "Highest-ranking Black woman at NASA",
-          "Terminated after discrimination report"
+          "Highest-ranking woman of colour at NASA, tasked with reforming the agency's equality - terminated after disagreeable report",
+          "Re-instated after capturing Congressional attention and publicity"
         ],
         img: RuthImg
       },
@@ -208,7 +213,7 @@ const slides = [
         year: "1975-1978",
         title: "Women in Motion Inc.",
         text: [
-          "Nichelle Nichols recruits astronauts",
+          "Star Trek actress Nichelle Nichols begins consulting firm, recruits diverse astronauts",
           "Boosts female applicants by 15%"
          ],
         img: MotionImg
@@ -246,26 +251,28 @@ const slides = [
       {
         year: "2001",
         title: "Women led ISS missions",
-        text: ["Operational authority increases, historical recognition remains uneven"],
+        text: ["Operational authority increases",
+           "Historical recognition remains uneven"],
         img: ISSImg
       },
 
       {
         year: "2003",
         title: "Columbia Disaster",
-        text: ["Space Shuttle Columbia disintegrated upon re-entry into the Earth's atmosphere, killing all seven crew members, including astronaut Kalpana Chawla, "]
+        text: ["Space Shuttle Columbia destroyed upon re-entry into the Earth's atmosphere, claimed lives of all seven crew members, including astronaut Kalpana Chawla"]
       },
       {
         year: "2009",
         title: "All-woman spacewalk cancelled",
-        text: ["Equipment designed for male bodies"]
+        text: ["Citing lack of suitable equipment - space suits designed around male bodies"]
       }
     ],
     media: [
         {
         year: "1990",
-        title: "NASA begins to digitize",
-        text: ["NASA begins to transfer large amounts of data to combat decaying physical archives such as magnetic tape. Builds the Planetary Data System which houses 50years of planetary missions and continues to be updated today."]
+        title: "NASA goes Digital",
+        text: ["NASA transfers data to combat decaying physical archives.",
+           "Builds the Planetary Data System which houses 50yrs of planetary missions and continues to be updated today."]
       },
 
         {
@@ -302,13 +309,13 @@ const slides = [
       {
         year: "2016",
         title: "Hidden Figures",
-        text: ["Brings hidden labour into public narrative"],
+        text: ["Book and film adaptation, by Margot Lee Shetterly, brings hidden labour into public narrative"],
         img: HiddenImg
       },
       {
         year: "2019",
         title: "Artemis Program",
-        text: ["Public committment to land the first woman on the Moon."]
+        text: ["Public commitment to land the first woman on the Moon by VP Mike Pence"]
       }
     ]
   },
@@ -320,19 +327,26 @@ const slides = [
         {
         year: "2021",
         title: "Rise of Commercial spaceflight",
-        text: ["Private companies like SpaceX and Blue Origin have successfully launched paying customers and private citizens into space, representing a new future of space tourism." ],
+        text: ["Private companies successfully launched paying customers and private citizens into space, representing a new future of space tourism." ],
       },
 
       {
         year: "2022",
         title: "Artemis I mission",
-        text: ["First uncrewed test of NASA's Artemis program, with the goal of returning humans to the moon."]
+        text: ["First un-crewed test of NASA's Artemis program, with the goal of returning humans to the moon."]
       },
-
+ {
+        year: "2022-2023",
+        title: "Artemis II Crew announcement",
+        text: ["Christine Koch selected as the first woman to travel to the Moon in upcoming mission." ],
+        img: CrewImg
+      },
       {
         year: "2026",
         title: "Artemis II",
-        text: ["Successful 10-day trip by of Artemis II"],
+        text: ["Successful 10-day trip around the Moon by of Artemis II",
+          "Koch becomes first woman to complete sub-orbital travel"
+        ],
         img: ArtemisImg
       }
     ],
@@ -342,31 +356,24 @@ const slides = [
         title: "Mary W. Jackson HQ",
         text: ["NASA renames HQ after Hidden Figures impact"]
       },
-      {
-        year: "2022",
-        title: "Nichelle Nichols tribute",
-        text: ["Ashes launched into space" ],
-        img: NichelleImg
-      },
-
        {
-        year: "2022-2023",
-        title: "Artemis II Crew announcement",
-        text: ["Christine Koch selected as the first woman to travel to the Moon (planned mission)" ],
-        img: CrewImg
+        year: "2021",
+        title: "Gender Inclusivity Study",
+        text: ["NASA releases its first Gender Inclusivity Study, acknowledging past marginalization - a significant institutional admission"]
       },
+     
 
        {
         year: "2024",
         title: "Hidden Figures Recognized",
-        text: ["Medals were awarded to Katherine Johnson, Dorothy Vaughn, and Dr.Christine Darden, along with a collective medal for all women who served as computers, mathematicians, and engineers at NASA between 1930-1970." ],
+        text: ["Recognition to all women who served as computers, mathematicians, and engineers at NASA between 1930-1970." ],
       },
 
 
       {
         year: "2024-2025",
         title: "DEI rollback",
-        text: ["Removal of women-focused archival language"]
+        text: ["Trump administration mandated removal and scrubbing of inclusive language, including the term “women” "]
       }
     ]
   }
@@ -465,12 +472,10 @@ export default function Timeline() {
         <h2 className="timeline__title">Timeline</h2>
 
         <p className="timeline__desc">
-          Human designs for spaceflight emerged not from a neutral desire for
-          discovery, but from a convergence of scientific ambition,
-          militarization, and modernist ideals that pre-defined whose
-          knowledge, bodies, and labour would count.
+          Human designs for spaceflight emerged from the convergence of scientific ambition, militarization, and doscovery. Although there has been a long history in the development and exploration of space, some events are far more coveted in our collective memories through the push in education and media.
         </p>
-
+        <p className="timeline__desc">Explore a new kind of timeline below, centred on the women of NASA’s contributions to space exploration, and contextualized by both major contributions to spaceflight and the media representation behind it.</p>
+<p className="timeline__hint"> Scroll or click by decade to explore below</p>
         <div className="timeline__controls">
           <div className="pillRow">
             {slides.map((s) => (
