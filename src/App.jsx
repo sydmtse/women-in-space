@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import "./styles.css";
-import HomePage from "./pages/HomePage";
-import CitationsPage from "./pages/CitationsPage";
+import HomePage from "./pages/Homepage";
+import CitationsPage from "./pages/Citationspage";
 
 export default function App() {
   return (
