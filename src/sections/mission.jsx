@@ -6,11 +6,9 @@ export default function Mission() {
         Making Space for Women is a counter-archive dedicated to the women who made space exploration possible - and to confronting the systems that have worked to make them invisible. This challenges the erased, minimized, or misrepresented narratives of women within NASA’s institutional history and works to protect active erasure of that history in the present.
       </p>
 
-    <p>
     <a href="https://www.whitehouse.gov/presidential-actions/2025/01/ending-radical-and-wasteful-government-dei-programs-and-preferencing/" className="linkUnderline" target="_blank" rel="noreferrer">
-    Exectutive Order 14151: “Radical And Wasteful Government DEI Programs And Preferencing”
+    <p className="dei__link">Exectutive Order 14151: “Radical And Wasteful Government DEI Programs And Preferencing”</p>
     </a>
-    </p>
 
     <hr className="missionDivider" />
 

@@ -264,7 +264,7 @@ export default function Spotlight() {
       <h2 className="section__title">Spotlight</h2>
 
       <p className="intro-text">
-        Space exploration was never the work of a single kind of person. The women documented here were explorers, engineers, mathematicians, administrators, and advocates - each indispensable, not all equally remembered. Browse by category below.
+        Space exploration was never the work of a single kind of person. The women documented here were explorers, engineers, mathematicians, administrators, and advocates - each indispensable to every mission but not all equally remembered. Browse by category below.
       </p>
 
       {/* Tabs */}
