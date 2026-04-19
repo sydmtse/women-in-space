@@ -134,9 +134,9 @@ const behindScenes = [
     name: "Margaret Hamilton",
     field: "Computer Scientist",
     period: "Active at NASA: 1961-1970s",
-    did: "Hamilton was the first programmer hired for the Apollo project at MIT and the first female programmer in the project, and later became Director of the Software Engineering Division. She was responsible for the team writing and testing all onboard in-flight software for the Apollo spacecraft's Command and Lunar Module. …",
+    did: "Margaret Hamilton was the first programmer hired for the Apollo project at MIT and one of the earliest women to lead a major software engineering team in the United States. As Director of the Software Engineering Division, she oversaw the writing and testing of all onboard in-flight software for Apollo's Command and Lunar Modules — code that had to work, without exception, on missions where failure was not survivable. It was Hamilton who coined the term 'software engineering,' arguing that the discipline deserved the same rigour and respect afforded to other branches of engineering. That argument was largely dismissed at the time. When Apollo 11 landed on the Moon in 1969, it was her code that got it there.",
     representation:
-      "Hamilton is hardly mentioned in the literature before 2016 - but in recent years she has received widespread recognition. She received the Presidential Medal of Freedom …",
+      "For nearly five decades, Hamilton's name was largely absent from the popular history of the Apollo programme. Software was considered a lesser discipline than the hardware engineering it supported. It was not until 2016, the same year Hidden Figures brought a parallel story to mainstream attention, that Hamilton received the Presidential Medal of Freedom. A photograph taken that year - Hamilton standing beside a stack of Apollo code printouts as tall as she is - went viral, and her name entered public consciousness for the first time.",
     sources: [
   {
     title: "Smithsonian Museum",
@@ -157,17 +157,23 @@ const behindScenes = [
     name: "Ruth Bates Harris",
     field: "Civil Rights Advocate / NASA Public Affairs Employee",
     period: "Active at NASA: 1971-1976",
-    did: "Harris had earned an MBA with an emphasis in personnel administration and had years of experience as the director of Human Relations for the Montgomery County school board in Maryland before being recruited to NASA. She was tasked with reforming the agency's equality programs, but faced systemic resistance - her firing led to Congressional attention and over 200 newspaper articles covering the case. She was rehired in 1973 as Deputy Assistant Administrator for Public Affairs.",
+    did: "Ruth Bates Harris arrived at NASA in 1971 with an MBA in personnel administration and years of experience as Director of Human Relations for the Montgomery County school board in Maryland — a record that made her one of the most qualified people the agency had ever hired into an equal opportunity role. She was tasked with reforming NASA's diversity and hiring programmes and did exactly that: her report, produced in the early 1970s, identified the agency's minority hiring record as a near total failure and named the structural reasons why. NASA fired her for it. The dismissal triggered Congressional hearings and generated over 200 newspaper articles — a level of public attention that forced the agency's hand. She was rehired in 1974 as Deputy Assistant Administrator for Public Affairs. The report that cost her her job had been accurate.",
     representation:
-      "Ruth Bates Harris remains one of the least publicly known but most structurally significant women in NASA's history. Her case has since been published in sociological, historical, and public management journals as a study in intersectionality and institutional resistance. …",
+      "Ruth Bates Harris is one of the least publicly known but most structurally consequential women in NASA's history. Her case has since been examined in sociological, historical, and public management scholarship as a study in intersectionality and institutional resistance. Though the scholarship exists, recognition was never formally granted, including having no meaningful mention of the NASA site.",
   sources: [
   {
     title: "Ephemera Journal",
     url: "https://ephemerajournal.org/contribution/intersectionality-work-case-ruth-bates-harris-and-nasa"
   },
+   
    {
+    title: "DC Historic Sites",
+    url: "https://historicsites.dcpreservation.org/items/show/1007"
+  },
+  
+  {
     title: "[No dedicated page on NASA for Ruth Bates Harris]",
-    url: "https://www.nasa.gov/?search=Ruth+Bates+Harris"
+    url: "https://ntrs.nasa.gov/citations/19750025865"
   },
 ],
       img: ruth_bates,

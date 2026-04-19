@@ -18,15 +18,18 @@ const sections = [
       title: "Women in Space & Feminist Literature",
       desc: "Resources and communities preserving and amplifying women's histories.",
       links: [
-        { name: "Herstory: Multi-disciplinary storytelling movement", url: "https://www.herstory.ie/home" },
-        { name: "Where are my People? A Historical Analysis on NASA's Equal Opportunity Initiatives", url: "Where are my People_  A Historical Analysis on NASA_s Equal Oppor.pdf" },
-        { name: "Gendered Space: Emerging Frames in NASA PR and Mainstream Media Representation, 1958-1986", url: "https://file.notion.so/f/f/f38b2df5-21d1-4a28-b886-baba6083c55f/fffa53b8-ba39-4667-86d3-7ea5e0ea2508/gendered_space_article.pdf?table=block&id=344a8e79-fb8c-80bb-97f4-f92d9ed79e7e&spaceId=f38b2df5-21d1-4a28-b886-baba6083c55f&expirationTimestamp=1776470400000&signature=qMcEfPP5PQ6Uu8qbcgN_QBV9ywdJAhHOvCb1EuLIvTw&downloadName=gendered+space+article.pdf" },
+        { name: "Where are my People? A Historical Analysis on NASA's Equal Opportunity Initiatives", url: "https://digitalcommons.unf.edu/cgi/viewcontent.cgi?article=2189&context=etd" },
+        { name: "Gendered Space: Emerging Frames in NASA PR and Mainstream Media Representation, 1958-1986", url: "https://jewlscholar.mtsu.edu/items/9c511100-6945-40b5-9635-13ced9f726e3" },
+        { name: "The Influence of Feminist Archival Theory on State Archival Exhibitions", url: "https://publications.archivists.org.au/index.php/asa/article/view/10933/11783" },
+
       ],
     },
     {
-      title: "Petitions & Campaigns",
+      title: "Communities & Campaigns",
       desc: "Active movements addressing representation gaps.",
       links: [
+        { name: "Herstory: Multi-disciplinary storytelling movement", url: "https://www.herstory.ie/home" },
+        { name: "Space4Women", url: "https://www.unoosa.org/oosa/en/ourwork/topics/spaceforwomen/index.html" },
         { name: "Human Computer Project", url: "http://margotleeshetterly.com/the-human-computer-project" },
         { name: "HOWL: History of Women's Liberation", url: "https://howl-uk.org/" },
       ],
