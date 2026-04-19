@@ -43,13 +43,11 @@ const sections = [
       {/* HEADER */}
       <div className="Discussion__header">
         <h2 className="Discussion__title">Join the Discussion</h2>
-        <p>
-          This project extends beyond the archive. These platforms, campaigns,
-          and communities offer ways to engage, question, and reshape how women’s
-          contributions are recorded and valued.
-        </p>
-
       </div>
+
+       <p className="intro">
+        This archive does not exist in isolation. The erasure it documents is ongoing - and so is the resistance. Below are the news stories, literature, and communities that situate this project within a wider fight over who gets to shape the historical record.
+        </p>
 
       {/* LIST */}
       <div className="Discussion__list">

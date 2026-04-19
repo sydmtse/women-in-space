@@ -472,10 +472,9 @@ export default function Timeline() {
         <h2 className="timeline__title">Timeline</h2>
 
         <p className="timeline__desc">
-          Human designs for spaceflight emerged from the convergence of scientific ambition, militarization, and doscovery. Although there has been a long history in the development and exploration of space, some events are far more coveted in our collective memories through the push in education and media.
+          Explore a new kind of timeline. One track follows the launches, landings, and major milestones of women in spaceflight. The other surfaces what ran alongside them — the advocacy, the media representation, the archival silences, and the behind-the-scenes labour that made mission success possible and equal access worth fighting for. Scroll through, or jump to a decade below.
         </p>
-        <p className="timeline__desc">Explore a new kind of timeline below, centred on the women of NASA’s contributions to space exploration, and contextualized by both major contributions to spaceflight and the media representation behind it.</p>
-<p className="timeline__hint"> Scroll or click by decade to explore below</p>
+
         <div className="timeline__controls">
           <div className="pillRow">
             {slides.map((s) => (

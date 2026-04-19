@@ -18,7 +18,15 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
 .panel {
   scroll-snap-align: start;
   min-height: 100vh;
-  padding: 96px 24px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel--dark {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  padding: 120px 24px 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,7 +35,16 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
 .panel--light {
   scroll-snap-align: start;
   min-height: 100vh;
-  padding: 96px 24px 48px;
+  padding: 10px 24px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel--red {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  padding: 120px 24px 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,12 +86,14 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
   border: none;
   color: inherit;
   opacity: 0.9;
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 0.6px;
   cursor: pointer;
-  padding: 6px 10px;
+  padding: 6px 40px;
 }
 .nav__link:hover { opacity: 1; text-decoration: underline; }
+
+/* ------------------------------------------------------------------------------ */
 
 .landing { width: 100%; display: grid; place-items: center; }
 .landing__content { text-align: center; max-width: 720px; }
@@ -89,20 +108,44 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
 .landing__accent { color: #ff4b6e; }
 .landing__subtitle { margin: 0; opacity: 0.85; margin-top: 30px;}
 
+/* ------------------------------------------------------------------------------ */
+
 /*  MISSION SECTION */
 .section { max-width: 1500px; text-align: center; }
 .section__title { margin: 0 0 18px; letter-spacing: 1px; text-transform: uppercase; }
-.section__text { margin: 10px auto; max-width: 800px; line-height: 1.6; opacity: 0.95; }
 
+.section__text { 
+margin: 10px auto; 
+max-width: 900px; 
+line-height: 1.6; 
+opacity: 0.95; 
+text-align: justify;
+margin-top: 30px;
+margin-bottom: 50px;
+}
 
+.italicText {
+margin: 10px auto; 
+max-width: 900px; 
+line-height: 1.6; 
+opacity: 0.95; 
+text-align: justify;
+margin-top: 60px;
 
-/* =============================================================================
-   TIMELINE
-   Horizontally scrollable component with two chronologically aligned rails
-   (contributions on top, media on bottom). Events alternate above/below each
-   rail — that alternation is the primary source of visual breathing room,
-   since adjacent cards never stack on the same side of the same rail.
-   ============================================================================= */
+font-style: italic;
+color: #3c435c;
+}
+
+.missionDivider {
+  border: none;
+  border-top: 1px solid #3c435c;
+  width: 70%;
+  margin-top: 60px;
+}
+
+/* ------------------------------------------------------------------------------ */
+
+/* TIMELINE */
 
 /* ---------- Outer shell ---------- */
 .timeline {
@@ -110,7 +153,7 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
   max-width: none;
   /* Small vertical trim — the parent .panel already supplies 96/48 padding,
      so we don't need the full reference 80–100px here. */
-  padding: 24px 0 40px;
+  padding: 20px 40px;
 }
 
 .timeline__header {
@@ -127,14 +170,11 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
 
 .timeline__desc {
   margin: 30px auto 0;
-  max-width: 1500px;
+  max-width: 950px;
+   text-align: justify;
   line-height: 1.6;
   opacity: 0.9;
-}
-
-.timeline__hint {
-  font-style: italic;
-  color: #a5b0b8;
+  margin-bottom: 50px;
 }
 
 .timeline__controls {
@@ -143,9 +183,8 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
   margin-top: 36px;
 }
 
-/* ---------- Viewport = fixed left gutter + horizontally scrollable track ----------
-   The gutter sits OUTSIDE the scroll container so the two rail labels stay
-   pinned on screen regardless of horizontal scroll position. */
+/* Viewport = fixed left gutter + horizontally scrollable track */
+
 .timeline__viewport {
   display: flex;
   align-items: stretch;
@@ -160,6 +199,7 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
      bullet clocks in around 170–180px, plus --connector-len (44) and
      half --circle-size (32) = 246–256. 258 gives a small safety margin
      so nothing clips against the overflow-y:hidden scroll container. */
+
   --rail-height: 860px;     /* fixed tall component height */
   --contrib-y: 30%;         /* upper rail Y (=258px from top)    */
   --media-y: 70%;           /* lower rail Y (=258px from bottom) */
@@ -181,7 +221,7 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
 .timeline__rail-label {
   position: absolute;
   right: 16px;
-  transform: translateY(-50%);   /* centres the label vertically on its rail */
+  transform: translateY(-50%);
   font-size: 0.72rem;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -190,15 +230,15 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
   max-width: 150px;
   opacity: 0.75;
 }
-.timeline__rail-label--contrib { top: var(--contrib-y); color: #c6ced4; }
-.timeline__rail-label--media   { top: var(--media-y);   color: #ff4b6e; }
 
-/* On narrow screens the gutter eats too much of the scroll area, so drop it. */
+.timeline__rail-label--contrib { top: var(--contrib-y); color: #c6ced4; }
+.timeline__rail-label--media   { top: var(--media-y);   color: #ff8099; }
+
 @media (max-width: 640px) {
   .timeline__gutter { display: none; }
 }
 
-/* ---------- Horizontal scroll container ---------- */
+/* Horizontal scroll container */
 .timeline__scroll {
   position: relative;
   flex: 1 1 auto;
@@ -225,43 +265,40 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
   background: rgba(255, 255, 255, 0.38);
 }
 
-/* ---------- Inner track (explicit pixel width is set inline from JS) ---------- */
+/* Inner track */
 .timeline__track {
   position: relative;
   height: var(--rail-height);
 }
 
-/* ---------- The two thin horizontal lines, each running the full track width ---------- */
+/* timelines */
 .timeline__rail-line {
   position: absolute;
   left: 0;
   right: 0;
-  height: 1px;              /* minimal line weight per reference */
+  height: 1px;              
   pointer-events: none;
 }
 .timeline__rail-line--contrib {
   top: var(--contrib-y);
-  background: rgba(198, 206, 212, 0.4);    /* desaturated #c6ced4 */
+  background: rgba(198, 206, 212, 0.4);
 }
 .timeline__rail-line--media {
   top: var(--media-y);
-  background: rgba(255, 75, 110, 0.5);     /* desaturated #ff4b6e */
+  background: rgba(255, 75, 110, 0.5);
 }
 
-/* ---------- Event node ----------
-   Each .tNode is a zero-height anchor positioned at (event-X, rail-Y). Its
-   children are absolutely positioned relative to that anchor so the circle
-   always sits on the rail line, while the card floats above or below. */
+/* Event node */
 .tNode {
   position: absolute;
   width: var(--card-width);
   height: 0;
-  transform: translateX(-50%);   /* centre the node on its X coordinate */
+  transform: translateX(-50%); 
 }
 .tNode--contrib { top: var(--contrib-y); }
 .tNode--media   { top: var(--media-y); }
 
-/* Circular anchor — always centred on the rail line */
+/* Circular anchor */
 .tCircle {
   position: absolute;
   left: 50%;
@@ -269,13 +306,11 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
   width: var(--circle-size);
   height: var(--circle-size);
   border-radius: 50%;
-  transform: translate(-50%, -50%);   /* centre of circle === rail-Y */
+  transform: translate(-50%, -50%);
   z-index: 3;
 }
 .tNode--contrib .tCircle {
   background: #c6ced4;
-  /* Inner halo matches the panel bg so the rail line appears "broken" by the
-     circle. Outer halo is a soft glow in the circle's own colour. */
   box-shadow:
     0 0 0 5px #3c435c,
     0 0 0 6px #8686918e;
@@ -293,7 +328,7 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
   height: var(--image-circle-size);
 
   overflow: hidden;
-  padding: 0; /* remove any inner spacing */
+  padding: 0;
   transform: translate(-50%, -50%);
    box-shadow:
     0 0 0 5px #3c435c,
@@ -314,7 +349,6 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
 .tCircle--image:hover img {
   transform: scale(1.08);
 }
-
 
 
 /* Thin vertical connector that links the circle to the card */
@@ -341,9 +375,7 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
   box-sizing: border-box;
 }
 
-/* ABOVE variant: card + connector extend UPWARD from the rail line.
-   Connector: from top of circle (y = -circle/2) up by --connector-len.
-   Card:      bottom edge = -circle/2 - --connector-len (above the connector). */
+/* ABOVE variant */
 .tNode--above .tConnector {
   bottom: calc(var(--circle-size) / 2);
   height: var(--connector-len);
@@ -352,7 +384,7 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
   bottom: calc(var(--circle-size) / 2 + var(--connector-len));
 }
 
-/* BELOW variant: card + connector extend DOWNWARD from the rail line. */
+/* BELOW variant */
 .tNode--below .tConnector {
   top: calc(var(--circle-size) / 2);
   height: var(--connector-len);
@@ -361,8 +393,6 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
   top: calc(var(--circle-size) / 2 + var(--connector-len));
 }
 
-/* Subtle accent on the card edge facing the rail — ties card to rail without
-   adding heavy borders elsewhere. */
 .tNode--contrib.tNode--above .tCard { border-bottom: 1px solid rgba(198, 206, 212, 0.4); }
 .tNode--contrib.tNode--below .tCard { border-top:    1px solid rgba(198, 206, 212, 0.4); }
 .tNode--media.tNode--above .tCard   { border-bottom: 1px solid rgba(255, 75, 110, 0.45); }
@@ -392,12 +422,53 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
   opacity: 0.88;
 }
 .tText li + li { margin-top: 4px; }
-/* End of timeline styles */
 
 
-
+/* ------------------------------------------------------------------------------ */
 
 /* SPOTLIGHT SECTION */
+
+.spotlightSection {
+  position: relative;
+}
+
+/* Text Descriptions */
+.intro-text {
+margin-top: 30px;
+margin-bottom: 50px; 
+max-width: 920px; 
+line-height: 1.6; 
+opacity: 0.95; 
+text-align: justify;
+}
+
+.sub-text {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  transition: opacity 0.8s ease;
+}
+
+.sub-text {
+  animation: fadeIn 0.7s ease;
+}
+
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* sub-section buttons */
 .pillRow {
   display: flex;
@@ -441,27 +512,12 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
  background: #c6ced4;
   color: #202431;
 
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-
-  box-shadow:
-    0 0 10px rgba(255, 255, 255, 0.2),
-    inset 0 0 6px rgba(255, 255, 255, 0.2);
-}
-
-
-.intro-text {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
-  opacity: 0.8;
-  font-size: 0.95rem;
 }
 
 /* Row layout */
 .circleRow {
   display: flex;
-  gap: 50px;
+  gap: 40px;
   justify-content: center;
   margin-top: 30px;
 }
@@ -473,39 +529,6 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
   align-items: center;
   text-align: center;
   width: 180px; /* forces consistency across all sections */
-}
-
-/* Text Descriptions */
-.intro-text {
-  max-width: 700px;
-  margin-top: 30px;
-  margin-bottom: 50px;
-  text-align: center;
-  opacity: 0.8;
-}
-
-.sub-text {
-  margin-top: 50px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-size: 0.9rem;
-  opacity: 0.7;
-  transition: opacity 0.8s ease;
-}
-
-.sub-text {
-  animation: fadeIn 0.7s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* Circular images */
@@ -531,7 +554,6 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
 }
 
 /* Name under image */
-
 .circleName {
   margin-top: 10px;
   font-size: 14px;
@@ -543,17 +565,6 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
 .circleName.active {
   color: #c6ced4;
   font-weight: 600;
-}
-
-.circleName.active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 100%;
-  height: 1px;
-  background-color: #ff4b6e; /* underline colour */
-  border-radius: 1px;
 }
 
 .circleName.active::after {
@@ -576,44 +587,37 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
   }
 }
 
-.circleRow {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 30px;
-  flex-wrap: wrap; /* optional but controlled */
-}
-
-
-.spotlightSection {
-  position: relative;
-}
-
-.nameWrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 
 /* Dropdown card */
 .dropdownCard {
   margin-top: 40px;
   padding: 50px;
   border-radius: 6px;
-  background: rgba(255,255,255,0.08);
+  background: #9f3441c7;
   backdrop-filter: blur(8px);
-  width: 1100px;
-  margin-left: 100px;
-  margin-right: 100px;
+  width: min(1100px, 100%);
+  margin: 40px auto 0;
 
   position: relative;
   margin-top: 40px;
   padding-top: 20px;
-  border-top: 1px solid #ff4b6e;
+  
   animation: fadeIn 0.3s ease;
 }
+
+.dropdownCard h4 {
+  font-size: 18px;
+  margin-top: 30px;
+  margin-bottom: 12px;
+}
+
+.dropdownCard p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: white;
+  text-align: justify;
+}
+
 
 /* Table styling */
 .infoTable {
@@ -624,9 +628,70 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
 
 .infoTable td {
   padding: 6px 10px;
-  border-bottom: 1px solid #ff4b6e;
+  border-bottom: 2px solid #ff4b6e;
+  font-size: 16px;
+  color: white;
+  line-height: 1.6;
 }
 
+/* Source Panel */
+.source-panel {
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+.source-toggle {
+  width: 100%;
+  height: 40px;
+  background: #8a1e2b;
+  border: 1px solid #8a1e2b;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 16px;
+
+  padding: 14px 18px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.source-content {
+  margin-top: 1rem;
+}
+
+.source-list a {
+  color: #c6ced4;
+  text-decoration: none;
+}
+
+.source-list {
+  list-style-type: disc;   
+  text-align: left;      
+
+  padding-left: 1.5rem;  
+  margin-left: 0;
+
+  margin-top: 1rem;
+}
+
+.source-list li {
+  text-align: left;
+  display: list-item;
+
+  margin-bottom: .8rem;
+  line-height: 1.5;
+}
+.arrow {
+  font-size: 1.5rem;
+  color: white;
+  margin-right: 5px;
+}
+
+
+
+/* ------------------------------------------------------------------------------ */
 
 /* JOIN THE DISCUSSION */
 .Discussion {
@@ -634,7 +699,6 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
 }
 
 .Discussion__header {
-  margin-bottom: 60px;
   text-align: center;
 }
 
@@ -642,6 +706,17 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
+.intro {
+max-width: 950px;
+margin-top: 30px;
+margin-bottom: 80px; 
+line-height: 1.6; 
+opacity: 0.95; 
+text-align: justify;
+}
+
+
 
 /* ROW STRUCTURE */
 .row {
@@ -706,7 +781,7 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
 
 /* link underline */
 .linkUnderline {
-   position: relative;
+  position: relative;
   display: inline-flex;
   width: fit-content;
   text-decoration: none;
@@ -741,6 +816,7 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
   transform: scaleX(1);
 }
 
+/* ------------------------------------------------------------------------------ */
 
 /* FOOTER SECTION */
 .footer {
@@ -796,4 +872,44 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
   margin-top: 10px;
   max-height: 200px;
   overflow-y: auto;
+}
+
+/* ------------------------------------------------------------------------------ */
+
+/* CITATIONS PAGE */
+
+.citationsPage {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  padding: 120px 40px;
+}
+
+.citationsPage h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.citationsPage p {
+  font-size: 1.35rem;
+  line-height: 1.6;
+  margin-bottom: 60px;
+}
+
+.citationsPage h2 {
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.citationsPage ul {
+  padding-left: 30px;
+}
+
+.citationsPage li {
+  margin-bottom: 16px;
+}
+
+.citationsPage a {
+  text-decoration: underline;
 }

@@ -53,48 +53,18 @@ export default function Footer() {
           </a>
         </div>
 
-        {/* Citations */}
+        
+         {/* Citations */}
         <div>
-          <h4 onClick={() => toggle("citations")} className="footer__toggle">
-            Citations
-          </h4>
-
-          {openSection === "citations" && (
-            <div className="footer__citations">
-
-              <div>
-                <h5 onClick={() => toggle("academic")}>Academic</h5>
-                {openSection === "academic" &&
-                  citations.academic.map((c, i) => (
-                    <a key={i} href={c.url} target="_blank" rel="noreferrer">
-                      {c.name}
-                    </a>
-                  ))}
-              </div>
-
-              <div>
-                <h5 onClick={() => toggle("media")}>Media</h5>
-                {openSection === "media" &&
-                  citations.media.map((c, i) => (
-                    <a key={i} href={c.url} target="_blank" rel="noreferrer">
-                      {c.name}
-                    </a>
-                  ))}
-              </div>
-
-              <div>
-                <h5 onClick={() => toggle("archives")}>Archives</h5>
-                {openSection === "archives" &&
-                  citations.archives.map((c, i) => (
-                    <a key={i} href={c.url} target="_blank" rel="noreferrer">
-                      {c.name}
-                    </a>
-                  ))}
-              </div>
-
-            </div>
-          )}
-        </div>
+        <h4>
+        <a href="/citations" className="footerLink">
+         Citations
+        </a>
+        </h4>
+        <p>
+            Click to find the full list of references and images used.
+          </p>
+         </div>
 
       </div>
 
