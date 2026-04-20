@@ -44,6 +44,20 @@ const references = {
       url: "https://www.womenshistory.org/exhibits/women-nasa"
     },
 
+     {
+      author: "National Geographic Education",
+      year: "n.d.",
+      title: "Women at NASA",
+      url: "https://education.nationalgeographic.org/resource/women-nasa/"
+    },
+
+     {
+      author: "Smithsonian Institution",
+      year: "n.d.",
+      title: "New partnership illuminates hidden record of NASA’s human computers.",
+      url: "https://womenshistory.si.edu/blog/new-partnership-illuminates-hidden-record-nasas-human-computers "
+    },
+
     {
       author: "BBC Future",
       year: "2025",
@@ -70,8 +84,49 @@ const references = {
     {
       author: "Wikipedia",
       year: "n.d.",
+      title: "Timeline of women in aviation",
+      url: "https://en.wikipedia.org/wiki/Timeline_of_women_in_aviation"
+    },
+
+     {
+      author: "NASA Plus",
+      year: "n.d.",
+      title: "Astronauts Number 1",
+      url: "https://plus.nasa.gov/video/astronauts-number-1/"
+    },
+{
+      author: "Wikipedia",
+      year: "n.d.",
       title: "Mercury 13",
       url: "https://en.wikipedia.org/wiki/Mercury_13"
+    },
+
+    {
+      author: "Encyclopaedia Britannica",
+      year: "n.d.",
+      title: "Valentina Tereshkova",
+      url: "https://www.britannica.com/biography/Valentina-Tereshkova"
+    },
+
+    {
+      author: "Paramount Plus",
+      year: "n.d.",
+      title: "Video source",
+      url: "https://www.paramountplus.com/gb/shows/video/1227425509/"
+    },
+
+     {
+      author: "Sydney Morning Herald",
+      year: "2022",
+      title: "Victory for women in equal pay case",
+      url: "https://www.smh.com.au/national/from-the-archives-1972-victory-for-women-in-equal-pay-case-20221208-p5c4vx.html"
+    },
+
+    {
+      author: "DC Preservation League",
+      year: "n.d.",
+      title: "Historic site item",
+      url: "https://historicsites.dcpreservation.org/items/show/1007 "
     },
 
     {
@@ -82,10 +137,87 @@ const references = {
     },
 
     {
+      author: "ABC",
+      year: "n.d.",
+      title: "How NASA’s first women astronauts revolutionised space",
+      url: "https://www.abc.net.au/listen/programs/latenightlive/how-nasas-first-women-astronauts-revolutionised-space/102879438"
+    },
+
+     {
+      author: "ThoughtCo",
+      year: "n.d.",
+      title: "Sally Ride",
+      url: "https://www.thoughtco.com/sally-ride-1779837"
+    },
+
+     {
+      author: "Manistee News ",
+      year: "2011",
+      title: "Mae Jemison",
+      url: "https://www.manisteenews.com/local-news/article/HONORING-BLACK-HISTORY-MONTH-Mae-Jemison-15910733.php"
+    },
+
+     {
+      author: "NASA",
+      year: "n.d.",
+      title: "Former astronaut Ellen Ochoa",
+      url: "https://www.nasa.gov/former-astronaut-ellen-ochoa/"
+    },
+
+     {
+      author: "Wikipedia",
+      year: "n.d.",
+      title: "Kalpana Chawla",
+      url: "https://en.wikipedia.org/wiki/Kalpana_Chawla"
+    },
+
+     {
+      author: "Space.com",
+      year: "n.d.",
+      title: "Eileen Collins interview",
+      url: "https://www.space.com/entertainment/space-movies-shows/we-chat-to-legendary-space-shuttle-commander-eileen-collins-about-her-new-documentary-spacewoman-interview"
+    },
+
+      {
+      author: "Space.com",
+      year: "n.d.",
+      title: "Women in space firsts gallery",
+      url: "https://www.space.com/16143-women-space-firsts-gallery.html"
+    },
+
+     {
+      author: "BBC News",
+      year: "2017",
+      title: "News article",
+      url: "https://www.bbc.co.uk/news/newsbeat-38663076"
+    },
+
+     {
+      author: "Smithsonian Magazine",
+      year: "2020",
+      title: "Woman in control",
+      url: "https://www.smithsonianmag.com/air-space-magazine/woman-control-180974942/"
+    },
+
+     {
+      author: "NBC News ",
+      year: "2019",
+      title: "NASA’s first all-female spacewalk.",
+      url: "https://www.nbcnews.com/mach/science/watch-nasa-s-first-all-female-spacewalk-ncna1068526"
+    },
+
+    {
       author: "Phys.org",
       year: "2024",
       title: "Moon mission Artemis II crew",
       url: "https://phys.org/news/2024-02-moon-nasa-artemis-ii-crew.html"
+    },
+
+    {
+      author: "CBS News",
+      year: "n.d.",
+      title: "Artemis II astronauts head back on Earth",
+      url: "https://www.cbsnews.com/news/artemis-ii-nasa-astronauts-head-back-on-earth/"
     }
   ],
 
@@ -174,7 +306,23 @@ const references = {
     }
   ],
 
-  "Communities & Campaigns": [
+  "Join the Discussion — Women in Space and Feminist Literature": [
+    {
+      author: "Heather D. Smith",
+      year: "2022",
+      title: "Where are my People? A Historical Analysis on NASA's Equal Opportunity Initiatives",
+      url: "https://digitalcommons.unf.edu/cgi/viewcontent.cgi?article=2189&context=etd"
+    },
+
+    {
+      author: "Catherine Banks",
+      year: "2023",
+      title: "The Influence of Feminist Archival Theory on State Archival Exhibitions",
+      url: "https://publications.archivists.org.au/index.php/asa/article/view/10933/11783"
+    }
+  ],
+
+  "Join the Discussion — Communities & Campaigns": [
     {
       author: "Herstory",
       year: "n.d.",
