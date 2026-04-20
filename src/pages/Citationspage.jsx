@@ -357,8 +357,13 @@ const references = {
 
 export default function CitationsPage() {
   return (
+    
     <div className="citationsPage">
       <h1>Citations</h1>
+
+     <a href="https://women-in-space.vercel.app/" className="cite-pill">
+        Return to Homepage
+      </a>
 
       {Object.entries(references).map(([section, sources]) => (
         <div key={section} className="citation-section">

@@ -48,8 +48,8 @@ export default function Footer() {
         {/* Contact */}
         <div>
           <h4>Contact</h4>
-          <a href="mailto:your@email.com" className="linkUnderline">
-            your@email.com
+          <a href="mailto:sydneytse7@gmail.com" className="linkUnderline">
+            sydneytse7@gmail.com
           </a>
         </div>
 

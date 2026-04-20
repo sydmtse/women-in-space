@@ -891,3 +891,30 @@ line-height: 1.6;
 opacity: 0.95; 
 text-align: left;
 }
+
+.cite-pill {
+  padding: 10px 24px;
+  border: none;
+  background: transparent;
+
+  color: #3c435c;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  border: 0.9px solid #ff4b6e;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  border-radius: 1px;
+}
+
+.cite-pill:hover {
+  background: #202431;
+  color: #c6ced4;
+}
+
+.cite-pill.active {
+ background: #c6ced4;
+  color: #202431;
+
+}
