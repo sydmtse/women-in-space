@@ -63,6 +63,7 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-seri
 .panel--dark { background: #3c435c; color: #eef1ff; }
 .panel--red { background: #8a1e2b; color: #fff; }
 .panel--footer { background: #3c435c; color: #eef1ff; }
+.panel--citations { background: #c6ced4; color: #202431; }
 
 
 .nav {
@@ -876,39 +877,17 @@ text-align: justify;
 /* ------------------------------------------------------------------------------ */
 
 /* CITATIONS PAGE */
-
-.citationsPage {
-  max-width: 1000px;
-  margin: 0 auto;
-
-  padding: 120px 40px;
+.citationsPage { max-width: 1500px; text-align: left; background-color: #ffffff; margin-top: 50px; color:#050612; padding: 20px;}
+.citation-section {  
+letter-spacing: 1px;
+text-transform: uppercase; 
+color:#050612;
 }
 
-.citationsPage h1 {
-  font-size: 4rem;
-  font-weight: 700;
-  margin-bottom: 30px;
-}
-
-.citationsPage p {
-  font-size: 1.35rem;
-  line-height: 1.6;
-  margin-bottom: 60px;
-}
-
-.citationsPage h2 {
-  margin-top: 60px;
-  margin-bottom: 20px;
-}
-
-.citationsPage ul {
-  padding-left: 30px;
-}
-
-.citationsPage li {
-  margin-bottom: 16px;
-}
-
-.citationsPage a {
-  text-decoration: underline;
+.citation-entry { 
+padding: 10px; 
+max-width: 900px; 
+line-height: 1.6; 
+opacity: 0.95; 
+text-align: left;
 }
